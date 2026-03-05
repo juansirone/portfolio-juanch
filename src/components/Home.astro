@@ -70,7 +70,7 @@ const contact: Record<string, string> = {
   <header class="sticky top-0 z-50 w-full border-b border-[color:rgb(var(--panel-border)/0.3)] bg-base/80 backdrop-blur">
     <div class="mx-auto w-full max-w-6xl px-5 py-4">
     <div class="flex items-center justify-between gap-4">
-      <a href={isEs ? '/es/' : '/'} class="flex items-center gap-2 text-text" aria-label="Home">
+      <a href={isEs ? `${import.meta.env.BASE_URL}es/` : `${import.meta.env.BASE_URL}`} class="flex items-center gap-2 text-text" aria-label="Home">
         <span class="flex h-12 w-12 items-center justify-center">
           <img
             src={logoLight}

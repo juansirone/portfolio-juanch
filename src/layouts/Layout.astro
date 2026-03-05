@@ -1,23 +1,74 @@
+---
+import '../styles/global.css';
+
+const {
+  title = 'Juan Portfolio',
+  description = 'Full Stack developer portfolio built with Astro.',
+  locale = 'en',
+} = Astro.props;
+---
+
 <!doctype html>
-<html lang="en">
+<html lang={locale}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<meta name="description" content={description} />
+		<meta name="color-scheme" content="dark light" />
+		<title>{title}</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script is:inline>
+			(() => {
+				const stored = localStorage.getItem('theme');
+				const theme = stored || 'dark';
+				if (theme === 'dark') {
+					document.documentElement.classList.add('dark');
+				} else {
+					document.documentElement.classList.remove('dark');
+				}
+			})();
+		</script>
 	</head>
 	<body>
+		<div class="page-ambient" aria-hidden="true"></div>
+		<div class="page-grid" aria-hidden="true"></div>
 		<slot />
+		<script is:inline>
+			(() => {
+				const root = document.documentElement;
+				const buttons = document.querySelectorAll('[data-theme-toggle]');
+				const applyTheme = (theme) => {
+					if (theme === 'dark') {
+						root.classList.add('dark');
+					} else {
+						root.classList.remove('dark');
+					}
+					localStorage.setItem('theme', theme);
+					buttons.forEach((button) => {
+						button.setAttribute('aria-pressed', theme === 'dark');
+						button.setAttribute('data-theme', theme);
+					});
+				};
+
+				const stored = localStorage.getItem('theme');
+				const initial = stored || (root.classList.contains('dark') ? 'dark' : 'light');
+				applyTheme(initial);
+
+				buttons.forEach((button) => {
+					button.addEventListener('click', () => {
+						const next = root.classList.contains('dark') ? 'light' : 'dark';
+						applyTheme(next);
+					});
+				});
+			})();
+		</script>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>

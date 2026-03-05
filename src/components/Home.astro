@@ -1,0 +1,550 @@
+---
+import logoLight from '../assets/logo-v2-light.png?url';
+import logoDark from '../assets/logo-v2-dark.png?url';
+
+const { locale = 'en', messages } = Astro.props;
+const isEs = locale === 'es';
+const otherLocaleUrl = isEs ? '/' : '/es/';
+const otherLocaleLabel = isEs ? 'EN' : 'ES';
+
+
+const defaultIcon = `
+<svg viewBox="0 0 24 24" aria-hidden="true">
+  <circle cx="12" cy="12" r="9" fill="#94a3b8" opacity="0.25" />
+  <circle cx="12" cy="12" r="4" fill="#94a3b8" />
+</svg>
+`;
+
+const svglRoutes: Record<string, { light: string; dark?: string }> = {
+  JavaScript: { light: 'https://svgl.app/library/javascript.svg' },
+  TypeScript: { light: 'https://svgl.app/library/typescript.svg' },
+  Angular: { light: 'https://svgl.app/library/angular.svg' },
+  React: {
+    light: 'https://svgl.app/library/react_light.svg',
+    dark: 'https://svgl.app/library/react_dark.svg',
+  },
+  HTML5: { light: 'https://svgl.app/library/html5.svg' },
+  CSS3: { light: 'https://svgl.app/library/css.svg' },
+  SCSS: { light: 'https://svgl.app/library/sass.svg' },
+  'Node.js': { light: 'https://svgl.app/library/nodejs.svg' },
+  Express: {
+    light: 'https://svgl.app/library/expressjs.svg',
+    dark: 'https://svgl.app/library/expressjs_dark.svg',
+  },
+  '.NET': { light: 'https://svgl.app/library/dotnet.svg' },
+  'React Native': {
+    light: 'https://svgl.app/library/react_light.svg',
+    dark: 'https://svgl.app/library/react_dark.svg',
+  },
+  Kotlin: { light: 'https://svgl.app/library/kotlin.svg' },
+  Swift: { light: 'https://svgl.app/library/swift.svg' },
+  MySQL: {
+    light: 'https://svgl.app/library/mysql-icon-light.svg',
+    dark: 'https://svgl.app/library/mysql-icon-dark.svg',
+  },
+  PostgreSQL: { light: 'https://svgl.app/library/postgresql.svg' },
+  SQL: { light: 'https://svgl.app/library/sqlite.svg' },
+  Git: { light: 'https://svgl.app/library/git.svg' },
+  GitHub: {
+    light: 'https://svgl.app/library/github_light.svg',
+    dark: 'https://svgl.app/library/github_dark.svg',
+  },
+  'Azure DevOps': { light: 'https://svgl.app/library/azure.svg' },
+  'SQL Server': { light: 'https://svgl.app/library/sql-server.svg' },
+  PHP: { light: 'https://svgl.app/library/php.svg' },
+  'C#': { light: 'https://svgl.app/library/csharp.svg' },
+  'Store Deploys': { light: 'https://svgl.app/library/appstore.svg' },
+  'Agile / Scrum': { light: 'https://svgl.app/library/linear.svg' },
+};
+
+
+const contact: Record<string, string> = {
+  email: 'juan.chinchilla10@gmail.com',
+  phone: '+50378951426',
+  linkedin: 'https://linkedin.com/in/your-handle',
+  github: 'https://github.com/your-handle',
+};
+---
+
+<div class="relative min-h-screen">
+  <header class="sticky top-0 z-50 w-full border-b border-[color:rgb(var(--panel-border)/0.3)] bg-base/80 backdrop-blur">
+    <div class="mx-auto w-full max-w-6xl px-5 py-4">
+    <div class="flex items-center justify-between gap-4">
+      <a href={isEs ? '/es/' : '/'} class="flex items-center gap-2 text-text" aria-label="Home">
+        <span class="flex h-12 w-12 items-center justify-center">
+          <img
+            src={logoLight}
+            alt=""
+            class="icon-light h-11 w-11"
+            loading="eager"
+            decoding="async"
+          />
+          <img
+            src={logoDark}
+            alt=""
+            class="icon-dark h-11 w-11"
+            loading="eager"
+            decoding="async"
+          />
+        </span>
+      </a>
+
+      <nav class="hidden items-center gap-6 text-xs font-medium uppercase tracking-[0.2em] text-muted md:flex">
+        <a href="#experience" class="transition hover:text-text">{messages.nav.work}</a>
+        <a href="#skills" class="transition hover:text-text">{messages.nav.skills}</a>
+        <a href="#projects" class="transition hover:text-text">{messages.nav.testimonials}</a>
+        <a href="#contact" class="transition hover:text-text">{messages.nav.contact}</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a
+          href={otherLocaleUrl}
+          class="rounded-full border border-[color:rgb(var(--panel-border)/0.9)] bg-panel/40 px-3 py-2 text-xs font-semibold uppercase tracking-widest text-muted shadow-[inset_0_0_0_1px_rgb(var(--panel-border)/0.2)] transition hover:text-text"
+          aria-label={isEs ? 'Switch to English' : 'Cambiar a Espanol'}
+        >
+          {otherLocaleLabel}
+        </a>
+        <button
+          type="button"
+          data-theme-toggle
+          class="flex items-center gap-2 rounded-full border border-[color:rgb(var(--panel-border)/0.9)] bg-panel/40 px-3 py-2 text-xs font-semibold uppercase tracking-widest text-muted shadow-[inset_0_0_0_1px_rgb(var(--panel-border)/0.2)] transition hover:text-text"
+          aria-pressed="true"
+          aria-label="Toggle theme"
+        >
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+            <path d="M12 3a1 1 0 0 1 1 1v1.5a1 1 0 0 1-2 0V4a1 1 0 0 1 1-1Zm6.36 2.64a1 1 0 0 1 1.42 0l.76.76a1 1 0 0 1-1.42 1.42l-.76-.76a1 1 0 0 1 0-1.42ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm9 4a1 1 0 0 1 1 1v1.5a1 1 0 1 1-2 0V12a1 1 0 0 1 1-1ZM4.22 5.64a1 1 0 0 1 1.42 0l.76.76A1 1 0 1 1 5 7.82l-.76-.76a1 1 0 0 1 0-1.42ZM3 12a1 1 0 0 1 1-1h1.5a1 1 0 1 1 0 2H4a1 1 0 0 1-1-1Zm15.78 6.36a1 1 0 0 1 1.42 0l.76.76a1 1 0 1 1-1.42 1.42l-.76-.76a1 1 0 0 1 0-1.42ZM12 18.5a1 1 0 0 1 1 1V21a1 1 0 1 1-2 0v-1.5a1 1 0 0 1 1-1ZM5.64 18.36a1 1 0 0 1 1.42 0l.76.76A1 1 0 1 1 6.4 20.54l-.76-.76a1 1 0 0 1 0-1.42Z" />
+          </svg>
+          <span class="hidden sm:inline">{messages.hero.toggle}</span>
+        </button>
+        <a
+          href="#contact"
+          class="hidden items-center gap-2 rounded-full bg-accent px-4 py-2 text-xs font-semibold uppercase tracking-widest text-white shadow-[0_0_20px_rgb(var(--glow)/0.35)] transition hover:translate-y-[-1px] hover:shadow-[0_0_26px_rgb(var(--glow)/0.45)] sm:inline-flex"
+        >
+          {messages.nav.cta}
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="mx-auto w-full max-w-6xl px-5 pb-12 pt-12">
+      <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <div class="max-w-3xl">
+          <span class="chip inline-flex items-center gap-2 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">
+            <span class="h-2 w-2 rounded-full bg-accent shadow-glow"></span>
+            {messages.hero.eyebrow}
+          </span>
+          <h1 class="mt-5 text-4xl font-semibold leading-tight text-text sm:text-5xl lg:text-6xl">
+            {messages.hero.title}
+            <span class="mt-3 block text-2xl font-semibold text-text sm:text-3xl lg:text-4xl">
+              {messages.hero.tagline}
+            </span>
+          </h1>
+          <p class="mt-4 max-w-xl text-base text-muted sm:text-lg">
+            {messages.hero.subtitle}
+          </p>
+          <div class="mt-6 flex flex-wrap items-center gap-4 text-xs uppercase tracking-[0.2em] text-muted">
+            <span>{messages.hero.location}</span>
+            <span class="h-1 w-1 rounded-full bg-accent"></span>
+            <span>{messages.hero.statsLabel}</span>
+          </div>
+        </div>
+
+        <div class="hero-focus">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+            {messages.hero.pillarsTitle}
+          </p>
+          <p class="mt-2 text-sm text-muted">{messages.hero.pillarsSubtitle}</p>
+          <div class="mt-4 space-y-4">
+            {messages.hero.pillars.map((item) => (
+              <div key={item.title} class="hero-pillar">
+                <span class="hero-pillar__dot"></span>
+                <div>
+                  <p class="text-sm font-semibold text-text">{item.title}</p>
+                  <p class="text-xs text-muted">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-cta-bar glass">
+        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a
+              href="#projects"
+              class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-[0_0_22px_rgb(var(--glow)/0.35)] transition hover:translate-y-[-1px] hover:shadow-[0_0_30px_rgb(var(--glow)/0.45)]"
+            >
+              {messages.hero.primaryCta}
+            </a>
+            <a
+              href="/cv.pdf"
+              class="inline-flex items-center justify-center rounded-full border border-[color:rgb(var(--panel-border)/0.6)] px-6 py-3 text-sm font-semibold text-text transition hover:border-[color:rgb(var(--accent)/0.7)]"
+            >
+              {messages.hero.secondaryCta}
+            </a>
+          </div>
+          <div class="flex flex-wrap items-center gap-6 text-xs uppercase tracking-[0.2em] text-muted">
+            {messages.stats.map((stat) => {
+              const target = Number(stat.value.replace(/\D/g, ''));
+              const suffix = stat.value.replace(/[0-9]/g, '');
+              return (
+                <div key={stat.label} class="flex items-baseline gap-3">
+                  <span
+                    class="text-2xl font-semibold text-text"
+                    data-counter
+                    data-target={target}
+                    data-suffix={suffix}
+                  >
+                    0
+                  </span>
+                  <span class="text-[10px] uppercase tracking-[0.3em]">{stat.label}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-5 lg:grid-cols-3">
+        <div class="glass rounded-2xl px-6 py-5">
+          <h3 class="text-lg font-semibold text-text">{messages.softskills.title}</h3>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            {messages.softskills.items.map((item) => (
+              <li key={item} class="grid grid-cols-[12px_1fr] items-start gap-2">
+                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="glass rounded-2xl px-6 py-5">
+          <h3 class="text-lg font-semibold text-text">{messages.certifications.title}</h3>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            {messages.certifications.items.map((item) => (
+              <li key={item} class="grid grid-cols-[12px_1fr] items-start gap-2">
+                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="glass rounded-2xl px-6 py-5">
+          <h3 class="text-lg font-semibold text-text">{messages.languages.title}</h3>
+          <ul class="mt-4 space-y-2 text-sm text-muted">
+            {messages.languages.items.map((item) => (
+              <li key={item} class="grid grid-cols-[12px_1fr] items-start gap-2">
+                <span class="mt-1.5 h-1.5 w-1.5 rounded-full bg-accent"></span>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="mx-auto w-full max-w-6xl px-5 py-12 reveal" data-reveal>
+      <div class="flex flex-col gap-4">
+        <span class="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+          {messages.experience.eyebrow}
+        </span>
+        <h2 class="text-3xl font-semibold text-text sm:text-4xl">{messages.experience.title}</h2>
+        <p class="max-w-2xl text-muted">{messages.experience.subtitle}</p>
+      </div>
+      <div class="mt-8 grid gap-5">
+        {messages.experience.items.map((item) => (
+          <article key={item.role} class="glass rounded-2xl px-6 py-5">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <div>
+                <p class="text-lg font-semibold text-text">{item.role}</p>
+                <p class="text-sm text-muted">{item.company}</p>
+              </div>
+              <span class="rounded-full border border-[color:rgb(var(--panel-border)/0.6)] px-3 py-1 text-xs font-semibold text-muted">
+                {item.time}
+              </span>
+            </div>
+            <p class="mt-4 text-sm text-muted">{item.description}</p>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {item.tags.map((tag) => (
+                <span
+                  key={tag}
+                  class="rounded-full border border-[color:rgb(var(--panel-border)/0.6)] bg-panel/60 px-3 py-1 text-[11px] font-semibold text-muted"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section id="skills" class="mx-auto w-full max-w-6xl px-5 py-12 reveal" data-reveal>
+      <div class="flex flex-col gap-4">
+        <span class="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+          {messages.skills.eyebrow}
+        </span>
+        <div class="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div>
+            <h2 class="text-3xl font-semibold text-text sm:text-4xl">{messages.skills.title}</h2>
+            <p class="mt-3 max-w-xl text-muted">{messages.skills.subtitle}</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <a
+              href={contact.linkedin}
+              class="inline-flex items-center gap-2 rounded-full border border-[color:rgb(var(--panel-border)/0.6)] px-4 py-2 text-xs font-semibold uppercase tracking-widest text-text"
+            >
+              {messages.skills.cta}
+              <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+                <path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2Zm-9 14H7v-7h3v7Zm-1.5-8.1A1.74 1.74 0 1 1 10.26 7a1.74 1.74 0 0 1-1.76 1.9ZM17 17h-3v-3.5c0-.8 0-1.9-1.2-1.9S11 12.5 11 13.4V17H8v-7h2.9v1c.4-.7 1.4-1.4 2.9-1.4 3.1 0 3.6 2 3.6 4.7Z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 grid gap-5 lg:grid-cols-3">
+        {messages.skills.groups.map((group) => (
+          <div key={group.title} class="glass rounded-2xl px-6 py-5">
+            <h3 class="text-lg font-semibold text-text">{group.title}</h3>
+            <div class="mt-4 flex flex-wrap gap-2">
+              {group.items.map((item) => {
+                const icon = svglRoutes[item];
+                return (
+                  <span
+                    key={item}
+                    class="flex items-center gap-2 rounded-full border border-[color:rgb(var(--panel-border)/0.6)] bg-panel/60 px-3 py-1 text-xs font-semibold text-muted"
+                  >
+                    <span class="h-4 w-4" data-icon={item}>
+                      {icon ? (
+                        <>
+                          <img class="icon-light" src={icon.light} alt="" loading="lazy" />
+                          <img class="icon-dark" src={icon.dark ?? icon.light} alt="" loading="lazy" />
+                        </>
+                      ) : (
+                        <span class="icon-light" set:html={defaultIcon}></span>
+                      )}
+                    </span>
+                    <span>{item}</span>
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section id="projects" class="mx-auto w-full max-w-6xl px-5 pt-16 pb-6 reveal" data-reveal>
+      <div class="flex flex-col gap-4">
+        <span class="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+          {messages.projects.eyebrow}
+        </span>
+        <h2 class="text-3xl font-semibold text-text sm:text-4xl">{messages.projects.title}</h2>
+        <p class="max-w-2xl text-muted">{messages.projects.subtitle}</p>
+      </div>
+      <div class="mt-8 timeline" data-timeline>
+        <div class="timeline-line" aria-hidden="true"></div>
+        <div class="timeline-dot" data-timeline-dot aria-hidden="true"></div>
+        <div class="grid gap-5">
+          {messages.projects.items.map((item) => (
+            <article key={item.title} class="glass rounded-2xl px-6 py-5">
+              <div class="flex flex-wrap items-center justify-between gap-3">
+                <div>
+                  <p class="text-lg font-semibold text-text">{item.title}</p>
+                  <p class="text-sm text-muted">{item.client}</p>
+                </div>
+                <span class="rounded-full border border-[color:rgb(var(--panel-border)/0.6)] px-3 py-1 text-xs font-semibold text-muted">
+                  {item.time}
+                </span>
+              </div>
+              <p class="mt-4 text-sm text-muted">{item.description}</p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                {item.stack.map((tag) => (
+                  <span
+                    key={tag}
+                    class="rounded-full border border-[color:rgb(var(--panel-border)/0.6)] bg-panel/60 px-3 py-1 text-[11px] font-semibold text-muted"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+      <div id="contact" class="pt-8">
+        <div class="glass rounded-3xl px-6 py-10 sm:px-10">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-[0.3em] text-muted">
+                {messages.cta.eyebrow}
+              </p>
+              <h2 class="mt-3 text-3xl font-semibold text-text sm:text-4xl">{messages.cta.title}</h2>
+              <p class="mt-3 max-w-xl text-muted">{messages.cta.subtitle}</p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <a
+                href={`mailto:${contact.email}`}
+                class="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-[0_0_22px_rgb(var(--glow)/0.35)] hover:shadow-[0_0_30px_rgb(var(--glow)/0.45)]"
+              >
+                {messages.cta.primary}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mx-auto w-full max-w-6xl px-5 pb-10 pt-4">
+    <div class="flex flex-col gap-6 border-t border-[color:rgb(var(--panel-border)/0.4)] pt-6 text-sm text-muted md:flex-row md:items-center md:justify-between">
+      <div>
+        <p class="text-text">© 2026 DevPortfolio. {messages.footer.rights}</p>
+        <p class="mt-1 text-xs">{messages.footer.built}</p>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href={contact.github} class="transition hover:text-text">GitHub</a>
+        <a href={contact.linkedin} class="transition hover:text-text">LinkedIn</a>
+        <a href={`mailto:${contact.email}`} class="transition hover:text-text">{contact.email}</a>
+      </div>
+    </div>
+  </footer>
+
+  <button
+    type="button"
+    data-backtotop
+    aria-label="Back to top"
+    class="fixed bottom-6 right-6 z-40 flex h-11 w-11 items-center justify-center rounded-full border border-[color:rgb(var(--panel-border)/0.5)] bg-panel/80 text-text shadow-[0_12px_30px_rgb(var(--glow)/0.15)] backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_36px_rgb(var(--glow)/0.2)] opacity-0 pointer-events-none translate-y-2"
+  >
+    <svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+      <path d="m12 5 6.5 6.5-1.4 1.4L13 8.8V19h-2V8.8l-4.1 4.1-1.4-1.4L12 5Z" />
+    </svg>
+  </button>
+
+  <script is:inline>
+    (() => {
+      const counters = document.querySelectorAll('[data-counter]');
+      if (counters.length) {
+        const animateCounter = (el) => {
+          const target = Number(el.getAttribute('data-target')) || 0;
+          const suffix = el.getAttribute('data-suffix') || '';
+          const start = performance.now();
+          const duration = 1200;
+          el.textContent = `0${suffix}`;
+          const step = (now) => {
+            const progress = Math.min((now - start) / duration, 1);
+            const value = Math.round(target * progress);
+            el.textContent = `${value}${suffix}`;
+            if (progress < 1) requestAnimationFrame(step);
+          };
+          requestAnimationFrame(step);
+        };
+
+        const observer = new IntersectionObserver(
+          (entries, obs) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                obs.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.6 }
+        );
+
+        counters.forEach((el) => {
+          observer.observe(el);
+          el.addEventListener('mouseenter', () => animateCounter(el));
+        });
+      }
+
+      const reveals = document.querySelectorAll('[data-reveal]');
+      if (reveals.length) {
+        if (!('IntersectionObserver' in window)) {
+          reveals.forEach((el) => el.classList.add('is-visible'));
+        } else {
+          const revealObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible');
+                  return;
+                }
+
+                entry.target.classList.remove('is-visible');
+              });
+            },
+            { threshold: 0.2 }
+          );
+
+          reveals.forEach((el) => revealObserver.observe(el));
+        }
+      }
+
+      const timeline = document.querySelector('[data-timeline]');
+      if (timeline) {
+        const updateDot = () => {
+          const rect = timeline.getBoundingClientRect();
+          const scrollY = window.scrollY || window.pageYOffset;
+          const top = scrollY + rect.top;
+          const height = rect.height;
+          const dotSize = 14;
+          const anchor = scrollY + window.innerHeight * 0.35;
+          let y = anchor - top;
+          y = Math.max(0, Math.min(y, height - dotSize));
+          timeline.style.setProperty('--dot-y', `${y}px`);
+        };
+
+        let ticking = false;
+        const onScroll = () => {
+          if (!ticking) {
+            window.requestAnimationFrame(() => {
+              updateDot();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        };
+
+        updateDot();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        window.addEventListener('resize', updateDot);
+      }
+
+      const backToTop = document.querySelector('[data-backtotop]');
+      const heroSection = document.querySelector('#home');
+      if (backToTop && heroSection) {
+        const showButton = () => {
+          backToTop.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-2');
+          backToTop.classList.add('opacity-100');
+        };
+        const hideButton = () => {
+          backToTop.classList.add('opacity-0', 'pointer-events-none', 'translate-y-2');
+          backToTop.classList.remove('opacity-100');
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                hideButton();
+              } else {
+                showButton();
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+
+        observer.observe(heroSection);
+
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+    })();
+  </script>
+</div>

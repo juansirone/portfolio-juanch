@@ -1,0 +1,11 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Home from '../../components/Home.astro';
+import messages from '../../i18n/es.json';
+
+const locale = 'es';
+---
+
+<Layout title={messages.meta.title} description={messages.meta.description} locale={locale}>
+  <Home locale={locale} messages={messages} />
+</Layout>

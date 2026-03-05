@@ -1,0 +1,237 @@
+{
+  "meta": {
+    "title": "Juan Chinchilla | Fullstack & Mobile Developer",
+    "description": "Fullstack and mobile developer with 6+ years building scalable web and mobile products."
+  },
+  "nav": {
+    "work": "Experience",
+    "skills": "Skills",
+    "journey": "Education",
+    "testimonials": "Projects",
+    "contact": "Contact",
+    "cta": "Let's Talk"
+  },
+  "hero": {
+    "eyebrow": "Senior Full Stack & Mobile Developer",
+    "title": "Juan Chinchilla",
+    "tagline": "Scalable architectures for web and mobile platforms.",
+    "subtitle": "Specialized in Angular, React, Node.js, .NET, and React Native.",
+    "primaryCta": "View Projects",
+    "secondaryCta": "Download CV",
+    "statsLabel": "6+ years delivering",
+    "location": "Based in El Salvador",
+    "toggle": "Theme",
+    "pillarsTitle": "Software Design Principles",
+    "pillarsSubtitle": "How I approach scalable and maintainable systems.",
+    "pillars": [
+      {
+        "title": "Maintainable architecture",
+        "description": "Systems designed to evolve with the product."
+      },
+      {
+        "title": "Product-oriented decisions",
+        "description": "Technical choices aligned with real user value."
+      },
+      {
+        "title": "Clarity over complexity",
+        "description": "Quality, performance, and clarity before cleverness."
+      }
+    ]
+  },
+  "stats": [
+    { "value": "6+", "label": "Years Experience" },
+    { "value": "12+", "label": "Active Projects" }
+  ],
+  "skills": {
+    "eyebrow": "Technical Skills",
+    "title": "Production-ready stack",
+    "subtitle": "Strong focus on scalable architectures, clean interfaces, and reliable delivery.",
+    "cta": "Connect on LinkedIn",
+    "groups": [
+      {
+        "title": "Languages",
+        "items": ["JavaScript", "TypeScript", "C#", "SQL", "PHP"]
+      },
+      {
+        "title": "Frontend",
+        "items": ["Angular", "React", "HTML5", "CSS3", "SCSS"]
+      },
+      {
+        "title": "Backend",
+        "items": ["Node.js", "Express", ".NET"]
+      },
+      {
+        "title": "Mobile",
+        "items": ["React Native", "Kotlin", "Swift", "Store Deploys"]
+      },
+      {
+        "title": "Databases",
+        "items": ["MySQL", "SQL Server", "PostgreSQL"]
+      },
+      {
+        "title": "Tools & Methods",
+        "items": ["Git", "GitHub", "Azure DevOps", "Agile / Scrum"]
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "Experience",
+    "title": "Fullstack & Mobile Delivery",
+    "subtitle": "Outsourcing and product work for private companies, banking, and government institutions.",
+    "items": [
+      {
+        "role": "Fullstack & Mobile Developer",
+        "company": "Xera Sistemas y Tecnologia (Costa Rica) | Remote",
+        "time": "Aug 2019 - Present",
+        "description": "Leading multiple national and international projects with Agile/Scrum teams.",
+        "tags": ["Agile", "Scrum", "Fullstack"]
+      },
+      {
+        "role": "Fullstack Developer",
+        "company": "Government of Costa Rica (Outsourcing via PwC)",
+        "time": "Sep 2019 - May 2021",
+        "description": "Built a resource management web app and a React Native mobile app connected through web services.",
+        "tags": [".NET", "SQL Server", "React Native"]
+      },
+      {
+        "role": "UX/UI + Web Developer",
+        "company": "Banco Popular - Seguros Popular (Outsourcing via PwC)",
+        "time": "Nov 2023 - Mar 2024",
+        "description": "Designed and delivered a React base template aligned to brand identity.",
+        "tags": ["React", "SCSS", "UX/UI"]
+      }
+    ]
+  },
+  "education": {
+    "eyebrow": "Education",
+    "title": "Academic Path",
+    "subtitle": "Formal studies in software engineering and systems.",
+    "items": [
+      {
+        "program": "Software Engineering Technician",
+        "school": "Universidad Tecnologica de El Salvador",
+        "time": "2019",
+        "description": "Technical degree in Software Engineering."
+      },
+      {
+        "program": "Systems and Computer Engineering",
+        "school": "Universidad Tecnologica de El Salvador",
+        "time": "In progress",
+        "description": "Currently studying (3 years)."
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Projects",
+    "title": "Selected delivery highlights",
+    "subtitle": "From government systems to fintech and social platforms.",
+    "items": [
+      {
+        "title": "Electronic Billing System",
+        "client": "Costa Rica | Remote",
+        "time": "May 2019 - Sep 2019",
+        "description": "Developing a .NET system compliant with local tax regulation.",
+        "stack": [".NET", "SQL Server", "Compliance"]
+      },
+      {
+        "title": "Government Resource Management",
+        "client": "Costa Rica (Outsourcing via PwC)",
+        "time": "Sep 2019 - May 2021",
+        "description": "Web platform to manage government resources plus a React Native mobile client.",
+        "stack": [".NET", "SQL Server", "React Native"]
+      },
+      {
+        "title": "Fittaro - Gym Social Network",
+        "client": "Guatemala",
+        "time": "Jun 2021 - Oct 2023",
+        "description": "Web + mobile development for a fitness social network.",
+        "stack": ["Angular", "Node.js", "React Native", "Firebase"]
+      },
+      {
+        "title": "Talos Platform",
+        "client": "Remote",
+        "time": "May 2022 - Jan 2025",
+        "description": "Mobile app and backend with .NET and SQL Server.",
+        "stack": ["Xamarin", ".NET", "SQL Server"]
+      },
+      {
+        "title": "Fix365",
+        "client": "Remote",
+        "time": "May 2023 - Nov 2024",
+        "description": "Web and mobile development for Fix365 operations. Platform for car repair shops.",
+        "stack": ["Angular", "Node.js", "React Native"]
+      },
+      {
+        "title": "Banco Popular - Seguros Popular",
+        "client": "Costa Rica (Outsourcing via PwC)",
+        "time": "Nov 2023 - Mar 2024",
+        "description": "UX/UI design and a React + SCSS base template aligned to brand identity.",
+        "stack": ["React", "SCSS", "UX/UI"]
+      },
+      {
+        "title": "Rimag",
+        "client": "Remote",
+        "time": "Mar 2024 - Jan 2025",
+        "description": "Laravel 10 core system plus marketing landing in WordPress.",
+        "stack": ["Laravel 10", "MySQL", "React", "WordPress"]
+      },
+      {
+        "title": "Veriexpress",
+        "client": "Remote",
+        "time": "May 2024 - Oct 2025",
+        "description": "Full-stack + mobile platform for dynamic form building.",
+        "stack": ["Angular", "Node.js", "React Native", "MySQL"]
+      },
+      {
+        "title": "Cobradores365",
+        "client": "Remote",
+        "time": "Present",
+        "description": "Mobile collections app built in React Native. Managements and user tracking.",
+        "stack": ["React Native"]
+      },
+      {
+        "title": "Chatbot WebApp with AI",
+        "client": "Latest project",
+        "time": "Present",
+        "description": "AI/NLP/LLM powered web and mobile app. Dashboard for ticket management and live conversations. Connections with Meta.",
+        "stack": ["Angular", "Node.js", "React Native", "AI"]
+      }
+    ]
+  },
+  "softskills": {
+    "title": "Soft Skills",
+    "items": [
+      "Complex problem solving",
+      "Analytical thinking",
+      "Innovation and continuous improvement",
+      "Team collaboration",
+      "Autonomy and ownership",
+      "Clear communication with technical and non-technical stakeholders"
+    ]
+  },
+  "certifications": {
+    "title": "Certifications",
+    "items": [
+      "Specialized courses in web, backend, and mobile development",
+      "Udemy, DevTalles"
+    ]
+  },
+  "languages": {
+    "title": "Languages",
+    "items": [
+      "Spanish: Native",
+      "English: Intermediate (B1 - technical reading)"
+    ]
+  },
+  "cta": {
+    "eyebrow": "Contact",
+    "title": "Let’s build impactful digital solutions.",
+    "subtitle": "Open to collaborating on scalable web and mobile platforms.",
+    "primary": "Get in touch",
+    "secondary": "Call Now"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with Astro + Tailwind."
+  }
+}

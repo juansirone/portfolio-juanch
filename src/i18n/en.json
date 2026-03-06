@@ -39,7 +39,7 @@
     ]
   },
   "stats": [
-    { "value": "6+", "label": "Years Experience" },
+    { "value": "6+", "label": "Years of Experience" },
     { "value": "12+", "label": "Active Projects" }
   ],
   "skills": {
@@ -62,7 +62,7 @@
       },
       {
         "title": "Mobile",
-        "items": ["React Native", "Kotlin", "Swift", "Store Deploys"]
+        "items": ["React Native", "Kotlin", "Swift", "Store Deployment"]
       },
       {
         "title": "Databases",
@@ -97,7 +97,7 @@
         "role": "UX/UI + Web Developer",
         "company": "Banco Popular - Seguros Popular (Outsourcing via PwC)",
         "time": "Nov 2023 - Mar 2024",
-        "description": "Designed and delivered a React base template aligned to brand identity.",
+        "description": "Designed and delivered a React base template aligned with brand identity.",
         "tags": ["React", "SCSS", "UX/UI"]
       }
     ]
@@ -109,13 +109,13 @@
     "items": [
       {
         "program": "Software Engineering Technician",
-        "school": "Universidad Tecnologica de El Salvador",
+        "school": "Universidad Tecnológica de El Salvador",
         "time": "2019",
         "description": "Technical degree in Software Engineering."
       },
       {
         "program": "Systems and Computer Engineering",
-        "school": "Universidad Tecnologica de El Salvador",
+        "school": "Universidad Tecnológica de El Salvador",
         "time": "In progress",
         "description": "Currently studying (3 years)."
       }
@@ -130,7 +130,7 @@
         "title": "Electronic Billing System",
         "client": "Costa Rica | Remote",
         "time": "May 2019 - Sep 2019",
-        "description": "Developing a .NET system compliant with local tax regulation.",
+        "description": "Developed a .NET system compliant with local tax regulations.",
         "stack": [".NET", "SQL Server", "Compliance"]
       },
       {
@@ -144,14 +144,14 @@
         "title": "Fittaro - Gym Social Network",
         "client": "Guatemala",
         "time": "Jun 2021 - Oct 2023",
-        "description": "Web + mobile development for a fitness social network.",
+        "description": "Web and mobile development for a fitness social network.",
         "stack": ["Angular", "Node.js", "React Native", "Firebase"]
       },
       {
         "title": "Talos Platform",
         "client": "Remote",
         "time": "May 2022 - Jan 2025",
-        "description": "Mobile app and backend with .NET and SQL Server.",
+        "description": "Mobile app and backend built with .NET and SQL Server.",
         "stack": ["Xamarin", ".NET", "SQL Server"]
       },
       {
@@ -165,7 +165,7 @@
         "title": "Banco Popular - Seguros Popular",
         "client": "Costa Rica (Outsourcing via PwC)",
         "time": "Nov 2023 - Mar 2024",
-        "description": "UX/UI design and a React + SCSS base template aligned to brand identity.",
+        "description": "UX/UI design and a React + SCSS base template aligned with brand identity.",
         "stack": ["React", "SCSS", "UX/UI"]
       },
       {
@@ -179,21 +179,21 @@
         "title": "Veriexpress",
         "client": "Remote",
         "time": "May 2024 - Oct 2025",
-        "description": "Full-stack + mobile platform for dynamic form building.",
+        "description": "Full-stack and mobile platform for dynamic form building.",
         "stack": ["Angular", "Node.js", "React Native", "MySQL"]
       },
       {
         "title": "Cobradores365",
         "client": "Remote",
         "time": "Present",
-        "description": "Mobile collections app built in React Native. Managements and user tracking.",
+        "description": "Mobile collections app built in React Native. Management and user tracking.",
         "stack": ["React Native"]
       },
       {
         "title": "Chatbot WebApp with AI",
         "client": "Latest project",
         "time": "Present",
-        "description": "AI/NLP/LLM powered web and mobile app. Dashboard for ticket management and live conversations. Connections with Meta.",
+        "description": "AI/NLP/LLM-powered web and mobile app. Dashboard for ticket management and live conversations. Integrations with Meta.",
         "stack": ["Angular", "Node.js", "React Native", "AI"]
       }
     ]

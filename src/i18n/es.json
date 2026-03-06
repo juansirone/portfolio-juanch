@@ -1,12 +1,12 @@
 {
   "meta": {
     "title": "Juan Chinchilla | Desarrollador Fullstack y Mobile",
-    "description": "Desarrollador Fullstack y Mobile con mas de 6 anos construyendo productos web y moviles escalables."
+    "description": "Desarrollador Fullstack y Mobile con más de 6 años construyendo productos web y móviles escalables."
   },
   "nav": {
     "work": "Experiencia",
     "skills": "Habilidades",
-    "journey": "Educacion",
+    "journey": "Educación",
     "testimonials": "Proyectos",
     "contact": "Contacto",
     "cta": "Hablemos"
@@ -14,15 +14,15 @@
   "hero": {
     "eyebrow": "Senior Full Stack & Mobile Developer",
     "title": "Juan Chinchilla",
-    "tagline": "Arquitecturas escalables para plataformas web y moviles.",
+    "tagline": "Arquitecturas escalables para plataformas web y móviles.",
     "subtitle": "Especializado en Angular, React, Node.js, .NET y React Native.",
     "primaryCta": "Ver Proyectos",
     "secondaryCta": "Descargar CV",
-    "statsLabel": "Mas de 6 años entregando",
+    "statsLabel": "Más de 6 años entregando",
     "location": "El Salvador | Remoto",
     "toggle": "Tema",
     "pillarsTitle": "Principios de Diseño de Software",
-    "pillarsSubtitle": "Como pienso al construir sistemas escalables y mantenibles.",
+    "pillarsSubtitle": "Cómo pienso al construir sistemas escalables y mantenibles.",
     "pillars": [
       {
         "title": "Arquitectura mantenible",
@@ -30,11 +30,11 @@
       },
       {
         "title": "Decisiones orientadas a producto",
-        "description": "Elecciones tecnicas alineadas al valor real."
+        "description": "Elecciones técnicas alineadas al valor real."
       },
       {
         "title": "Claridad sobre complejidad",
-        "description": "Calidad, rendimiento y claridad antes que sofisticacion."
+        "description": "Calidad, rendimiento y claridad antes que sofisticación."
       }
     ]
   },
@@ -43,8 +43,8 @@
     { "value": "12+", "label": "Proyectos activos" }
   ],
   "skills": {
-    "eyebrow": "Habilidades tecnicas",
-    "title": "Stack moderno listo para produccion",
+    "eyebrow": "Habilidades técnicas",
+    "title": "Stack moderno listo para producción",
     "subtitle": "Enfoque en arquitecturas escalables, interfaces limpias y entregas confiables.",
     "cta": "Conectar en LinkedIn",
     "groups": [
@@ -69,7 +69,7 @@
         "items": ["MySQL", "SQL Server", "PostgreSQL"]
       },
       {
-        "title": "Herramientas y metodologias",
+        "title": "Herramientas y metodologías",
         "items": ["Git", "GitHub", "Azure DevOps", "Agile / Scrum"]
       }
     ]
@@ -81,43 +81,43 @@
     "items": [
       {
         "role": "Fullstack & Mobile Developer",
-        "company": "Xera Sistemas y Tecnologia (Costa Rica) | Remoto",
+        "company": "Xera Sistemas y Tecnología (Costa Rica) | Remoto",
         "time": "Ago 2019 - Presente",
-        "description": "Desarrollo de multiples proyectos para clientes nacionales e internacionales bajo Agile/Scrum.",
+        "description": "Desarrollo de múltiples proyectos para clientes nacionales e internacionales bajo Agile/Scrum.",
         "tags": ["Agile", "Scrum", "Fullstack"]
       },
       {
         "role": "Fullstack Developer",
-        "company": "Gobierno de Costa Rica (Outsourcing via PwC)",
+        "company": "Gobierno de Costa Rica (Outsourcing vía PwC)",
         "time": "Sep 2019 - May 2021",
-        "description": "Desarrollo de aplicacion web para gestion del Estado y app movil React Native conectada via Web Services.",
+        "description": "Desarrollo de aplicación web para gestión del Estado y app móvil React Native conectada vía Web Services.",
         "tags": [".NET", "SQL Server", "React Native"]
       },
       {
         "role": "UX/UI + Web Developer",
-        "company": "Banco Popular - Seguros Popular (Outsourcing via PwC)",
+        "company": "Banco Popular - Seguros Popular (Outsourcing vía PwC)",
         "time": "Nov 2023 - Mar 2024",
-        "description": "Diseno UX/UI y plantilla base en React con SCSS alineada a la identidad visual.",
+        "description": "Diseño UX/UI y plantilla base en React con SCSS alineada a la identidad visual.",
         "tags": ["React", "SCSS", "UX/UI"]
       }
     ]
   },
   "education": {
-    "eyebrow": "Educacion",
-    "title": "Formacion academica",
-    "subtitle": "Estudios formales en ingenieria de software y sistemas.",
+    "eyebrow": "Educación",
+    "title": "Formación académica",
+    "subtitle": "Estudios formales en ingeniería de software y sistemas.",
     "items": [
       {
-        "program": "Tecnico en Ingenieria de Software",
-        "school": "Universidad Tecnologica de El Salvador",
+        "program": "Técnico en Ingeniería de Software",
+        "school": "Universidad Tecnológica de El Salvador",
         "time": "2019",
-        "description": "Grado tecnico en Ingenieria de Software."
+        "description": "Grado técnico en Ingeniería de Software."
       },
       {
-        "program": "Ingenieria en Sistemas y Computacion",
-        "school": "Universidad Tecnologica de El Salvador",
+        "program": "Ingeniería en Sistemas y Computación",
+        "school": "Universidad Tecnológica de El Salvador",
         "time": "En curso",
-        "description": "Cursando actualmente (3 anos)."
+        "description": "Cursando actualmente (3 años)."
       }
     ]
   },
@@ -127,45 +127,45 @@
     "subtitle": "Desde sistemas gubernamentales hasta fintech y plataformas sociales.",
     "items": [
       {
-        "title": "Facturacion Electronica",
+        "title": "Facturación Electrónica",
         "client": "Costa Rica | Remoto",
         "time": "May 2019 - Sep 2019",
         "description": "Desarrollo de sistema en .NET cumpliendo normativa fiscal local.",
         "stack": [".NET", "SQL Server", "Compliance"]
       },
       {
-        "title": "Gestion de recursos del Estado",
-        "client": "Costa Rica (Outsourcing via PwC)",
+        "title": "Gestión de recursos del Estado",
+        "client": "Costa Rica (Outsourcing vía PwC)",
         "time": "Sep 2019 - May 2021",
-        "description": "Plataforma web para gestion estatal y app movil en React Native.",
+        "description": "Plataforma web para gestión estatal y app móvil en React Native.",
         "stack": [".NET", "SQL Server", "React Native"]
       },
       {
         "title": "Fittaro - Red Social de Gimnasios",
         "client": "Guatemala",
         "time": "Jun 2021 - Oct 2023",
-        "description": "Desarrollo web y movil para red social fitness.",
+        "description": "Desarrollo web y móvil para red social fitness.",
         "stack": ["Angular", "Node.js", "React Native", "Firebase"]
       },
       {
         "title": "Plataforma Talos",
         "client": "Remoto",
         "time": "May 2022 - Jan 2025",
-        "description": "App movil y backend con .NET y SQL Server.",
+        "description": "App móvil y backend con .NET y SQL Server.",
         "stack": ["Xamarin", ".NET", "SQL Server"]
       },
       {
         "title": "Fix365",
         "client": "Remoto",
         "time": "May 2023 - Nov 2024",
-        "description": "Desarrollo web y movil para Fix365. Plataforma de taller automotriz.",
+        "description": "Desarrollo web y móvil para Fix365. Plataforma de taller automotriz.",
         "stack": ["Angular", "Node.js", "React Native"]
       },
       {
         "title": "Banco Popular - Seguros Popular",
-        "client": "Costa Rica (Outsourcing via PwC)",
+        "client": "Costa Rica (Outsourcing vía PwC)",
         "time": "Nov 2023 - Mar 2024",
-        "description": "Diseno UX/UI y plantilla base en React + SCSS alineada a la marca.",
+        "description": "Diseño UX/UI y plantilla base en React + SCSS alineada a la marca.",
         "stack": ["React", "SCSS", "UX/UI"]
       },
       {
@@ -174,26 +174,26 @@
         "time": "Mar 2024 - Ene 2025",
         "description": "Sistema principal en Laravel 10 y landing en WordPress.",
         "stack": ["Laravel 10", "MySQL", "React", "WordPress"]
-      },      
+      },
       {
         "title": "Veriexpress",
         "client": "Remoto",
         "time": "May 2024 - Oct 2025",
-        "description": "Plataforma completa para construccion de formularios dinamicos.",
+        "description": "Plataforma completa para construcción de formularios dinámicos.",
         "stack": ["Angular", "Node.js", "React Native", "MySQL"]
       },
       {
         "title": "Cobradores365",
         "client": "Remoto",
         "time": "Presente",
-        "description": "Aplicacion movil de cobros desarrollada en React Native. Gestiones y track de usuario.",
+        "description": "Aplicación móvil de cobros desarrollada en React Native. Gestiones y track de usuario.",
         "stack": ["React Native"]
       },
       {
         "title": "Chatbot WebApp con IA",
-        "client": "Proyecto mas reciente",
+        "client": "Proyecto más reciente",
         "time": "Presente",
-        "description": "Aplicacion web y movil con integracion de IA, NLP y LLMs. Dashboard de manejo de tickets y conversaciones en vivo. Conexiones con Meta.",
+        "description": "Aplicación web y móvil con integración de IA, NLP y LLMs. Dashboard de manejo de tickets y conversaciones en vivo. Conexiones con Meta.",
         "stack": ["Angular", "Node.js", "React Native", "IA"]
       }
     ]
@@ -201,12 +201,12 @@
   "softskills": {
     "title": "Habilidades blandas",
     "items": [
-      "Resolucion de problemas complejos",
-      "Pensamiento analitico",
-      "Innovacion y mejora continua",
-      "Trabajo en equipo y colaboracion",
-      "Autonomia y responsabilidad",
-      "Comunicacion efectiva con clientes tecnicos y no tecnicos"
+      "Resolución de problemas complejos",
+      "Pensamiento analítico",
+      "Innovación y mejora continua",
+      "Trabajo en equipo y colaboración",
+      "Autonomía y responsabilidad",
+      "Comunicación efectiva con clientes técnicos y no técnicos"
     ]
   },
   "certifications": {
@@ -220,14 +220,14 @@
     "title": "Idiomas",
     "items": [
       "Spanish: Nativo",
-      "English: Intermedio (B1 - lectura tecnica)"
+      "English: Intermedio (B1 - lectura técnica)"
     ]
   },
   "cta": {
     "eyebrow": "Contacto",
     "title": "Construyamos soluciones digitales impactantes.",
     "subtitle": "Abierto a colaborar en plataformas web y móviles escalables.",
-    "primary": "Contactame",
+    "primary": "Contáctame",
     "secondary": "Llamar"
   },
   "footer": {
